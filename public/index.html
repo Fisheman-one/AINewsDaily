@@ -38,7 +38,7 @@
     </section>
 
     <!-- Featured News (Top 3) -->
-    <section id="featuredSection" class="featured-section">
+    <section class="featured-section">
       <div class="featured-grid" id="featuredGrid"></div>
     </section>
 
@@ -48,25 +48,20 @@
         <h2>全部资讯</h2>
         <span class="news-count" id="newsCount"></span>
       </div>
-      <div class="news-list" id="newsList">
-        <div class="loading">
-          <div class="loading-spinner"></div>
-          <p>正在加载...</p>
-        </div>
-      </div>
+      <div class="news-list" id="newsList"></div>
     </section>
   </main>
 
-  <!-- Article Reader Modal -->
+  <!-- Article Reader Modal - Fixed Structure -->
   <div id="readerModal" class="modal">
-    <div class="modal-backdrop" onclick="closeReader()"></div>
+    <div id="modalBackdrop" class="modal-backdrop"></div>
     <div class="modal-content">
       <div class="modal-header">
         <div class="modal-title-area">
           <span class="modal-source" id="modalSource"></span>
           <h3 id="modalTitle"></h3>
         </div>
-        <button class="modal-close" onclick="closeReader()">
+        <button id="modalCloseBtn" class="modal-close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -74,17 +69,18 @@
         </button>
       </div>
       <div class="modal-body">
-        <iframe id="articleFrame" class="article-frame" sandbox="allow-scripts allow-same-origin"></iframe>
-        <div id="articleFallback" class="article-fallback" style="display: none;">
-          <div class="fallback-content" id="fallbackContent"></div>
-          <a id="fallbackLink" href="" target="_blank" class="open-original-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-            在原站阅读
-          </a>
+        <div id="articleContent" class="article-content">
+          <div class="article-summary" id="articleSummary"></div>
+          <div class="article-actions">
+            <a id="articleLink" href="" target="_blank" rel="noopener" class="open-original-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              在原站阅读全文
+            </a>
+          </div>
         </div>
       </div>
     </div>
