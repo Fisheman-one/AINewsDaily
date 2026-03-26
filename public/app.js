@@ -1,9 +1,9 @@
 // Daily AI News - Frontend App
 
 const NEWS_FILE = 'news.json';
-
 let currentNewsData = [];
 let isModalOpen = false;
+let currentIframeTimeout = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   loadNews();
@@ -24,7 +24,6 @@ async function loadNews() {
     generateInsights(data.news);
     renderFeatured(data.news.slice(0, 3));
     renderNewsList(data.news.slice(3));
-
   } catch (error) {
     console.error('Failed to load news:', error);
   }
@@ -48,27 +47,52 @@ function openModal(news) {
   const modal = document.getElementById('readerModal');
   const modalSource = document.getElementById('modalSource');
   const modalTitle = document.getElementById('modalTitle');
-  const articleSummary = document.getElementById('articleSummary');
-  const openOriginalBtn = document.getElementById('openOriginalBtn');
-  const openNewWindowBtn = document.getElementById('openNewWindowBtn');
+  const openExternalBtn = document.getElementById('openExternalBtn');
+  const loading = document.getElementById('articleLoading');
+  const frame = document.getElementById('articleFrame');
 
-  const displayTitle = news.titleZh || news.title;
-  const summary = news.summaryZh || '暂无摘要内容，请点击下方按钮前往原文阅读。';
+  // Clear any existing timeout
+  if (currentIframeTimeout) {
+    clearTimeout(currentIframeTimeout);
+  }
 
+  // Set modal content
   modalSource.textContent = news.source[0] || 'AI News';
-  modalTitle.textContent = displayTitle;
-  articleSummary.innerHTML = `
-    <p class="summary-text">${escapeHtml(summary)}</p>
-    <p class="summary-meta">发布时间: ${formatDateTime(news.publishedAt * 1000)}</p>
-  `;
+  modalTitle.textContent = news.titleZh || news.title;
+  openExternalBtn.href = news.url;
 
-  // 在原站阅读
-  openOriginalBtn.href = news.url;
+  // Show loading
+  loading.classList.remove('hidden');
+  frame.style.opacity = '0';
 
-  // 在新窗口打开
-  openNewWindowBtn.onclick = (e) => {
-    e.preventDefault();
-    window.open(news.url, '_blank', 'noopener,noreferrer');
+  // Load iframe
+  frame.src = news.url;
+
+  // Set timeout to check if iframe loaded
+  currentIframeTimeout = setTimeout(() => {
+    // Check if iframe has content
+    try {
+      const frameDoc = frame.contentDocument || frame.contentWindow.document;
+      if (frameDoc && frameDoc.body && frameDoc.body.innerHTML.length > 100) {
+        // Content loaded successfully
+        loading.classList.add('hidden');
+        frame.style.opacity = '1';
+      } else {
+        // Still loading or blocked - keep showing loading
+      }
+    } catch (e) {
+      // Cross-origin blocked - iframe might still be loading or blocked
+      // Give it more time
+    }
+  }, 3000);
+
+  // Hide loading when iframe actually loads
+  frame.onload = function() {
+    clearTimeout(currentIframeTimeout);
+    setTimeout(() => {
+      loading.classList.add('hidden');
+      frame.style.opacity = '1';
+    }, 500);
   };
 
   modal.classList.add('active');
@@ -78,9 +102,21 @@ function openModal(news) {
 
 function closeModal() {
   const modal = document.getElementById('readerModal');
+  const frame = document.getElementById('articleFrame');
+
+  if (currentIframeTimeout) {
+    clearTimeout(currentIframeTimeout);
+  }
+
   modal.classList.remove('active');
   isModalOpen = false;
   document.body.style.overflow = '';
+
+  // Clear iframe src after animation
+  setTimeout(() => {
+    frame.src = 'about:blank';
+    frame.style.opacity = '0';
+  }, 300);
 }
 
 function generateInsights(news) {
@@ -200,7 +236,6 @@ function renderNewsList(newsItems) {
   }).join('');
 }
 
-// Global function for onclick handlers
 window.openArticle = function(id) {
   const news = currentNewsData.find(n => n.id === id);
   if (news) {
