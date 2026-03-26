@@ -45,21 +45,18 @@ function initModal() {
   const backdrop = document.getElementById('modalBackdrop');
   const closeBtn = document.getElementById('modalCloseBtn');
 
-  // Close button
   closeBtn.addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     closeModal();
   });
 
-  // Backdrop click - only close if clicking directly on backdrop
   backdrop.addEventListener('click', function(e) {
     if (e.target === backdrop) {
       closeModal();
     }
   });
 
-  // Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && isModalOpen) {
       closeModal();
@@ -72,7 +69,8 @@ function openModal(news) {
   const modalSource = document.getElementById('modalSource');
   const modalTitle = document.getElementById('modalTitle');
   const articleSummary = document.getElementById('articleSummary');
-  const articleLink = document.getElementById('articleLink');
+  const openOriginalBtn = document.getElementById('openOriginalBtn');
+  const openNewWindowBtn = document.getElementById('openNewWindowBtn');
 
   const displayTitle = news.titleZh || news.title;
   const summary = news.summaryZh || '暂无摘要内容，请点击下方按钮前往原文阅读。';
@@ -83,7 +81,16 @@ function openModal(news) {
     <p class="summary-text">${escapeHtml(summary)}</p>
     <p class="summary-meta">发布时间: ${formatDateTime(news.publishedAt * 1000)}</p>
   `;
-  articleLink.href = news.url;
+
+  // Button 1: 在原站阅读 (same tab)
+  openOriginalBtn.href = news.url;
+  openOriginalBtn.onclick = null; // Reset
+
+  // Button 2: 在新窗口打开 (new tab)
+  openNewWindowBtn.onclick = function(e) {
+    e.preventDefault();
+    window.open(news.url, '_blank', 'noopener,noreferrer');
+  };
 
   modal.classList.add('active');
   isModalOpen = true;
@@ -201,7 +208,6 @@ function renderFeatured(featured) {
     `;
   }).join('');
 
-  // Add click handlers using event delegation
   grid.querySelectorAll('.featured-card').forEach(card => {
     card.addEventListener('click', function(e) {
       e.preventDefault();
@@ -241,7 +247,6 @@ function renderNewsList(newsItems) {
     `;
   }).join('');
 
-  // Add click handlers using event delegation
   newsList.querySelectorAll('.news-card').forEach(card => {
     card.addEventListener('click', function(e) {
       e.preventDefault();
