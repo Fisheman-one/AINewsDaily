@@ -3,7 +3,6 @@
 const NEWS_FILE = 'news.json';
 let currentNewsData = [];
 let isModalOpen = false;
-let currentIframeTimeout = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   loadNews();
@@ -47,53 +46,27 @@ function openModal(news) {
   const modal = document.getElementById('readerModal');
   const modalSource = document.getElementById('modalSource');
   const modalTitle = document.getElementById('modalTitle');
-  const openExternalBtn = document.getElementById('openExternalBtn');
-  const loading = document.getElementById('articleLoading');
+  const openSameTabBtn = document.getElementById('openSameTabBtn');
+  const openNewTabBtn = document.getElementById('openNewTabBtn');
   const frame = document.getElementById('articleFrame');
-
-  // Clear any existing timeout
-  if (currentIframeTimeout) {
-    clearTimeout(currentIframeTimeout);
-  }
 
   // Set modal content
   modalSource.textContent = news.source[0] || 'AI News';
   modalTitle.textContent = news.titleZh || news.title;
-  openExternalBtn.href = news.url;
 
-  // Show loading
-  loading.classList.remove('hidden');
-  frame.style.opacity = '0';
-
-  // Load iframe
-  frame.src = news.url;
-
-  // Set timeout to check if iframe loaded
-  currentIframeTimeout = setTimeout(() => {
-    // Check if iframe has content
-    try {
-      const frameDoc = frame.contentDocument || frame.contentWindow.document;
-      if (frameDoc && frameDoc.body && frameDoc.body.innerHTML.length > 100) {
-        // Content loaded successfully
-        loading.classList.add('hidden');
-        frame.style.opacity = '1';
-      } else {
-        // Still loading or blocked - keep showing loading
-      }
-    } catch (e) {
-      // Cross-origin blocked - iframe might still be loading or blocked
-      // Give it more time
-    }
-  }, 3000);
-
-  // Hide loading when iframe actually loads
-  frame.onload = function() {
-    clearTimeout(currentIframeTimeout);
-    setTimeout(() => {
-      loading.classList.add('hidden');
-      frame.style.opacity = '1';
-    }, 500);
+  // Set button links
+  // 在当前窗口打开 - 直接替换当前页面
+  openSameTabBtn.href = news.url;
+  openSameTabBtn.onclick = (e) => {
+    // 让 a 标签的默认行为发生，即在当前窗口跳转
+    // 不阻止默认行为
   };
+
+  // 在新窗口打开 - 新标签页
+  openNewTabBtn.href = news.url;
+
+  // 尝试加载 iframe
+  frame.src = news.url;
 
   modal.classList.add('active');
   isModalOpen = true;
@@ -104,10 +77,6 @@ function closeModal() {
   const modal = document.getElementById('readerModal');
   const frame = document.getElementById('articleFrame');
 
-  if (currentIframeTimeout) {
-    clearTimeout(currentIframeTimeout);
-  }
-
   modal.classList.remove('active');
   isModalOpen = false;
   document.body.style.overflow = '';
@@ -115,7 +84,6 @@ function closeModal() {
   // Clear iframe src after animation
   setTimeout(() => {
     frame.src = 'about:blank';
-    frame.style.opacity = '0';
   }, 300);
 }
 
