@@ -45,12 +45,17 @@ async function loadNews() {
     const maxHotness = Math.max(...data.news.map(n => n.hotness));
 
     // Render news cards
-    newsList.innerHTML = data.news.map((news, index) => `
+    newsList.innerHTML = data.news.map((news, index) => {
+      const displayTitle = news.titleZh || news.title;
+      const hasChinese = news.titleZh && news.titleZh !== news.title;
+
+      return `
       <article class="news-card" data-id="${news.id}">
         <div class="news-header" onclick="toggleDetails('${news.id}')">
           <span class="news-rank">${index + 1}</span>
           <div class="news-content">
-            <h2 class="news-title">${escapeHtml(news.title)}</h2>
+            <h2 class="news-title">${escapeHtml(displayTitle)}</h2>
+            ${hasChinese ? `<div class="original-title">原文: ${escapeHtml(news.title)}</div>` : ''}
             <div class="news-meta">
               <div class="hotness-container">
                 <span class="hotness-badge">${news.hotness.toFixed(1)}</span>
@@ -59,7 +64,7 @@ async function loadNews() {
                 </div>
               </div>
               <div class="source-tags">
-                ${news.source.map(s => `<span class="source-tag">${escapeHtml(s)}</span>`).join('')}
+                ${news.source.map(s => `<span class="source-tag ${getSourceClass(s)}">${escapeHtml(s)}</span>`).join('')}
               </div>
             </div>
           </div>
@@ -68,6 +73,12 @@ async function loadNews() {
           </svg>
         </div>
         <div class="news-details" id="details-${news.id}">
+          ${news.summaryZh ? `
+          <div class="detail-section">
+            <div class="detail-label">摘要</div>
+            <div class="detail-value summary">${escapeHtml(news.summaryZh)}</div>
+          </div>
+          ` : ''}
           <div class="detail-section">
             <div class="detail-label">原始链接</div>
             <a href="${escapeHtml(news.url)}" target="_blank" rel="noopener" class="news-link">
@@ -81,7 +92,7 @@ async function loadNews() {
           ${renderStats(news)}
         </div>
       </article>
-    `).join('');
+    `}).join('');
 
   } catch (error) {
     console.error('Failed to load news:', error);
@@ -111,10 +122,13 @@ function renderStats(news) {
   const stats = [];
 
   if (news.redditScore !== undefined) {
-    stats.push({ icon: '📊', label: 'Reddit热度', value: news.redditScore.toFixed(2) });
+    stats.push({ icon: '📊', label: 'Reddit', value: news.redditScore.toFixed(2) });
   }
   if (news.hnScore !== undefined) {
-    stats.push({ icon: '📊', label: 'HN热度', value: news.hnScore.toFixed(2) });
+    stats.push({ icon: '📊', label: 'HN', value: news.hnScore.toFixed(2) });
+  }
+  if (news.cnScore !== undefined) {
+    stats.push({ icon: '📊', label: '国内', value: news.cnScore.toFixed(2) });
   }
 
   if (stats.length === 0) return '';
@@ -132,6 +146,13 @@ function renderStats(news) {
       </div>
     </div>
   `;
+}
+
+function getSourceClass(source) {
+  if (source.includes('Reddit')) return 'source-reddit';
+  if (source.includes('Hacker')) return 'source-hn';
+  if (['36氪', 'IT之家', '虎嗅', '少数派'].some(s => source.includes(s))) return 'source-cn';
+  return '';
 }
 
 function formatDateTime(timestamp) {

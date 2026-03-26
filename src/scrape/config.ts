@@ -9,16 +9,21 @@ export const CONFIG = {
     aiKeywords: [
       'AI', 'ML', 'GPT', 'neural', 'LLM', 'deep learning',
       'OpenAI', 'Google DeepMind', 'Anthropic', 'Claude',
-      'ChatGPT', 'Gemini', 'Stable Diffusion', 'Midjourney'
+      'ChatGPT', 'Gemini', 'Stable Diffusion', 'Midjourney',
+      'artificial intelligence', 'machine learning'
     ],
     topStoriesLimit: 500,
     fetchConcurrency: 50,
   },
   scoring: {
-    weights: { reddit: 0.4, hn: 0.35, twitter: 0.25 },
-    maxResults: 30,
+    weights: { reddit: 0.3, hn: 0.3, twitter: 0.15, chinese: 0.25 },
+    maxResults: 35,
   },
   output: {
     path: './public/news.json',
+  },
+  chinese: {
+    sources: ['36kr', 'ithome', 'huxiu', 'sspai'],
+    hotnessBase: 5,
   },
 };

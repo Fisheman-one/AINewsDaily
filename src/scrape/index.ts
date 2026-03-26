@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { fetchRedditNews } from './reddit';
 import { fetchHNNews } from './hackernews';
+import { fetch36krNews, fetchITHomenNews, fetchHuxiuNews, fetchSspaiNews } from './chinese';
 import { calculateScores } from './scorer';
 import { NewsData } from '../types/news';
 import { CONFIG } from './config';
@@ -12,15 +13,22 @@ async function main() {
 
   try {
     // Fetch from all sources in parallel
-    const [redditNews, hnNews] = await Promise.all([
-      fetchRedditNews(),
-      fetchHNNews(),
+    const [redditNews, hnNews, kr36, ithome, huxiu, sspai] = await Promise.all([
+      fetchRedditNews().catch(() => []),
+      fetchHNNews().catch(() => []),
+      fetch36krNews().catch(() => []),
+      fetchITHomenNews().catch(() => []),
+      fetchHuxiuNews().catch(() => []),
+      fetchSspaiNews().catch(() => []),
     ]);
 
-    console.log(`Total: ${redditNews.length} Reddit posts, ${hnNews.length} HN stories`);
+    // Combine Chinese news sources
+    const chineseNews = [...kr36, ...ithome, ...huxiu, ...sspai];
+
+    console.log(`Fetched: ${redditNews.length} Reddit, ${hnNews.length} HN, ${chineseNews.length} Chinese news`);
 
     // Calculate hotness scores and merge
-    const scoredNews = calculateScores(redditNews, hnNews);
+    const scoredNews = calculateScores(redditNews, hnNews, chineseNews);
 
     // Prepare output
     const output: NewsData = {

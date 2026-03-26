@@ -15,6 +15,11 @@
   --warning: #d29922;
   --error: #f85149;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* Chinese source colors */
+  --cn-36kr: #ff6b4a;
+  --cn-ithome: #0078d4;
+  --cn-huxiu: #ff7c00;
+  --cn-sspai: #4caf50;
 }
 
 * {
@@ -220,7 +225,14 @@ main {
   font-size: 1rem;
   color: var(--text-primary);
   line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.original-title {
+  font-size: 0.75rem;
+  color: var(--text-muted);
   margin-bottom: 8px;
+  font-style: italic;
 }
 
 .news-meta {
@@ -276,6 +288,22 @@ main {
   color: var(--text-secondary);
 }
 
+/* Chinese source specific colors */
+.source-tag.source-cn {
+  background: var(--bg-tertiary);
+  border: 1px solid currentColor;
+}
+
+.source-tag.source-reddit {
+  color: #ff4500;
+  border: 1px solid #ff450044;
+}
+
+.source-tag.source-hn {
+  color: #ff6600;
+  border: 1px solid #ff660044;
+}
+
 .expand-icon {
   color: var(--text-muted);
   transition: transform 0.2s;
@@ -315,6 +343,11 @@ main {
 .detail-value {
   font-size: 0.875rem;
   color: var(--text-secondary);
+}
+
+.detail-value.summary {
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .news-link {
