@@ -27,8 +27,8 @@ async function main() {
 
     console.log(`Fetched: ${redditNews.length} Reddit, ${hnNews.length} HN, ${chineseNews.length} Chinese news`);
 
-    // Calculate hotness scores and merge
-    const scoredNews = calculateScores(redditNews, hnNews, chineseNews);
+    // Calculate hotness scores and merge (async with translation)
+    const scoredNews = await calculateScores(redditNews, hnNews, chineseNews);
 
     // Prepare output
     const output: NewsData = {
