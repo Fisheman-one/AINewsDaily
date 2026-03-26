@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily AI News - 每日AI新闻</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>🤖 Daily AI News</h1>
+        <p class="subtitle">前一日影响力较大的AI新闻汇总</p>
+      </div>
+      <div class="header-right">
+        <div class="update-info">
+          <span class="update-label">更新时间</span>
+          <span id="updateTime" class="update-time">加载中...</span>
+        </div>
+        <button id="refreshBtn" class="refresh-btn" title="刷新数据">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="newsList" class="news-list">
+      <div class="loading">
+        <div class="loading-spinner"></div>
+        <p>正在加载新闻...</p>
+      </div>
+    </div>
+
+    <div id="errorMessage" class="error-message" style="display: none;">
+      <p>加载失败，请稍后重试</p>
+      <button onclick="location.reload()" class="retry-btn">重试</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>每日北京时间 06:00 自动更新</p>
+      <p class="footer-sources">数据来源: Reddit · Hacker News</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
