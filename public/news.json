@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-26T07:49:23.325Z",
+  "generatedAt": "2026-03-26T08:07:09.820Z",
   "totalCount": 35,
   "news": [
     {
@@ -9,8 +9,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 5.24,
-      "hnScore": 17.46401271377522,
+      "hotness": 5.3,
+      "hnScore": 17.655643183901088,
       "publishedAt": 1774470423,
       "isTranslated": false
     },
@@ -21,8 +21,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 3.93,
-      "hnScore": 13.109013558680576,
+      "hotness": 3.9,
+      "hnScore": 13.00960439767109,
       "publishedAt": 1774447634,
       "isTranslated": false
     },
@@ -34,7 +34,7 @@
         "Hacker News"
       ],
       "hotness": 3.16,
-      "hnScore": 10.546925280708395,
+      "hnScore": 10.538080854921152,
       "publishedAt": 1774473117,
       "isTranslated": false
     },
@@ -45,8 +45,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 3.16,
-      "hnScore": 10.531414421208146,
+      "hotness": 3.12,
+      "hnScore": 10.402216309511077,
       "publishedAt": 1774448424,
       "isTranslated": false
     },
@@ -57,8 +57,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 3.11,
-      "hnScore": 10.365679742095038,
+      "hotness": 3.07,
+      "hnScore": 10.24962434290405,
       "publishedAt": 1774382465,
       "isTranslated": false
     },
@@ -69,21 +69,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 3.09,
-      "hnScore": 10.316580615989848,
+      "hotness": 3.06,
+      "hnScore": 10.208964482709064,
       "publishedAt": 1774412834,
       "isTranslated": false
     },
     {
-      "id": "hn-47520505",
-      "title": "Meta and YouTube found negligent in landmark social media addiction case",
-      "url": "https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html",
+      "id": "hn-47519519",
+      "title": "Slovenian officials blame Israeli firm Black Cube for trying to manipulate vote",
+      "url": "https://www.wsj.com/world/europe/spies-lies-and-fake-investors-in-disguise-how-plotters-tried-to-flip-a-european-election-1f42b39a",
       "source": [
         "Hacker News"
       ],
-      "hotness": 2.52,
-      "hnScore": 8.404606476680282,
-      "publishedAt": 1774459773,
+      "hotness": 2.93,
+      "hnScore": 9.767452882234918,
+      "publishedAt": 1774455855,
       "isTranslated": false
     },
     {
@@ -93,9 +93,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 2.48,
-      "hnScore": 8.271141153786264,
+      "hotness": 2.51,
+      "hnScore": 8.36057821978948,
       "publishedAt": 1774462563,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47520505",
+      "title": "Meta and YouTube found negligent in landmark social media addiction case",
+      "url": "https://www.nytimes.com/2026/03/25/technology/social-media-trial-verdict.html",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 2.5,
+      "hnScore": 8.328682169325917,
+      "publishedAt": 1774459773,
       "isTranslated": false
     },
     {
@@ -105,9 +117,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 2.43,
-      "hnScore": 8.093929291159986,
+      "hotness": 2.44,
+      "hnScore": 8.129144982774996,
       "publishedAt": 1774466082,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47507150",
+      "title": "Wine 11 rewrites how Linux runs Windows games at kernel with massive speed gains",
+      "url": "https://www.xda-developers.com/wine-11-rewrites-linux-runs-windows-games-speed-gains/",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 2.43,
+      "hnScore": 8.08856752252123,
+      "publishedAt": 1774377292,
       "isTranslated": false
     },
     {
@@ -117,8 +141,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 2.15,
-      "hnScore": 7.158503160642398,
+      "hotness": 2.12,
+      "hnScore": 7.0805039079769845,
       "publishedAt": 1774450976,
       "isTranslated": false
     },
@@ -129,8 +153,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 2.06,
-      "hnScore": 6.863233756141001,
+      "hotness": 2.03,
+      "hnScore": 6.7790364388610636,
       "publishedAt": 1774384268,
       "isTranslated": false
     },
@@ -141,9 +165,33 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.92,
-      "hnScore": 6.3840919764735995,
+      "hotness": 1.89,
+      "hnScore": 6.315549104093977,
       "publishedAt": 1774450588,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47500335",
+      "title": "Microsoft's \"fix\" for Windows 11",
+      "url": "https://www.sambent.com/microsofts-plan-to-fix-windows-11-is-gaslighting/",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 1.84,
+      "hnScore": 6.1486126936583245,
+      "publishedAt": 1774344989,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47521799",
+      "title": "Updates to GitHub Copilot interaction data usage policy",
+      "url": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 1.78,
+      "hnScore": 5.919501289591569,
+      "publishedAt": 1774465756,
       "isTranslated": false
     },
     {
@@ -154,20 +202,8 @@
         "Hacker News"
       ],
       "hotness": 1.77,
-      "hnScore": 5.889679959479518,
+      "hnScore": 5.8984282171275115,
       "publishedAt": 1774485991,
-      "isTranslated": false
-    },
-    {
-      "id": "hn-47521799",
-      "title": "Updates to GitHub Copilot interaction data usage policy",
-      "url": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
-      "source": [
-        "Hacker News"
-      ],
-      "hotness": 1.76,
-      "hnScore": 5.875050073662609,
-      "publishedAt": 1774465756,
       "isTranslated": false
     },
     {
@@ -177,8 +213,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.67,
-      "hnScore": 5.556265444011964,
+      "hotness": 1.65,
+      "hnScore": 5.4993364545810435,
       "publishedAt": 1774462600,
       "isTranslated": false
     },
@@ -189,21 +225,9 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.61,
-      "hnScore": 5.373056182315289,
+      "hotness": 1.59,
+      "hnScore": 5.3071401823334226,
       "publishedAt": 1774442954,
-      "isTranslated": false
-    },
-    {
-      "id": "hn-47501426",
-      "title": "Tell HN: Litellm 1.82.7 and 1.82.8 on PyPI are compromised",
-      "url": "https://github.com/BerriAI/litellm/issues/24512",
-      "source": [
-        "Hacker News"
-      ],
-      "hotness": 1.58,
-      "hnScore": 5.269468975558386,
-      "publishedAt": 1774353989,
       "isTranslated": false
     },
     {
@@ -213,9 +237,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.57,
-      "hnScore": 5.249598618822657,
+      "hotness": 1.56,
+      "hnScore": 5.199620539164573,
       "publishedAt": 1774389267,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47501426",
+      "title": "Tell HN: Litellm 1.82.7 and 1.82.8 on PyPI are compromised",
+      "url": "https://github.com/BerriAI/litellm/issues/24512",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 1.56,
+      "hnScore": 5.204823770834754,
+      "publishedAt": 1774353989,
       "isTranslated": false
     },
     {
@@ -225,8 +261,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.51,
-      "hnScore": 5.0470996004337625,
+      "hotness": 1.5,
+      "hnScore": 4.985182396168216,
       "publishedAt": 1774366181,
       "isTranslated": false
     },
@@ -237,8 +273,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.49,
-      "hnScore": 4.959897464375389,
+      "hotness": 1.47,
+      "hnScore": 4.91159562801533,
       "publishedAt": 1774472136,
       "isTranslated": false
     },
@@ -249,21 +285,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.46,
-      "hnScore": 4.865534261200114,
+      "hotness": 1.44,
+      "hnScore": 4.811256465466621,
       "publishedAt": 1774399495,
       "isTranslated": false
     },
     {
-      "id": "hn-47503810",
-      "title": "Epic Games to cut more than 1k jobs as Fortnite usage falls",
-      "url": "https://www.reuters.com/legal/litigation/epic-games-said-tuesday-that-it-will-lay-off-more-than-1000-employees-2026-03-24/",
+      "id": "hn-47522608",
+      "title": "Sodium-ion EV battery breakthrough delivers 11-min charging and 450 km range",
+      "url": "https://electrek.co/2026/03/25/sodium-ion-ev-battery-delivers-11-min-charging-450-km-range/",
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.33,
-      "hnScore": 4.431216954098777,
-      "publishedAt": 1774364970,
+      "hotness": 1.31,
+      "hnScore": 4.350945716709336,
+      "publishedAt": 1774469998,
       "isTranslated": false
     },
     {
@@ -273,9 +309,21 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.32,
-      "hnScore": 4.410633381970154,
+      "hotness": 1.31,
+      "hnScore": 4.361879552792513,
       "publishedAt": 1774398585,
+      "isTranslated": false
+    },
+    {
+      "id": "hn-47503810",
+      "title": "Epic Games to cut more than 1k jobs as Fortnite usage falls",
+      "url": "https://www.reuters.com/legal/litigation/epic-games-said-tuesday-that-it-will-lay-off-more-than-1000-employees-2026-03-24/",
+      "source": [
+        "Hacker News"
+      ],
+      "hotness": 1.31,
+      "hnScore": 4.376855323258699,
+      "publishedAt": 1774364970,
       "isTranslated": false
     },
     {
@@ -286,20 +334,8 @@
         "Hacker News"
       ],
       "hotness": 1.3,
-      "hnScore": 4.343426890406796,
+      "hnScore": 4.325078269262501,
       "publishedAt": 1774481455,
-      "isTranslated": false
-    },
-    {
-      "id": "hn-47522608",
-      "title": "Sodium-ion EV battery breakthrough delivers 11-min charging and 450 km range",
-      "url": "https://electrek.co/2026/03/25/sodium-ion-ev-battery-delivers-11-min-charging-450-km-range/",
-      "source": [
-        "Hacker News"
-      ],
-      "hotness": 1.28,
-      "hnScore": 4.262489527612363,
-      "publishedAt": 1774469998,
       "isTranslated": false
     },
     {
@@ -309,8 +345,8 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.26,
-      "hnScore": 4.20699822310752,
+      "hotness": 1.28,
+      "hnScore": 4.278640292952645,
       "publishedAt": 1774466390,
       "isTranslated": false
     },
@@ -321,9 +357,65 @@
       "source": [
         "Hacker News"
       ],
-      "hotness": 1.26,
-      "hnScore": 4.1975706999083995,
+      "hotness": 1.24,
+      "hnScore": 4.146075412907729,
       "publishedAt": 1774365952,
+      "isTranslated": false
+    },
+    {
+      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739481242238976?f=rss]]>",
+      "title": "中指研究院：2025年商业地产市场延续供需偏弱态势",
+      "titleZh": "中指研究院：2025年商业地产市场延续供需偏弱态势",
+      "url": "<![CDATA[https://36kr.com/newsflashes/3739481242238976?f=rss]]>",
+      "source": [
+        "36氪"
+      ],
+      "hotness": 1.24,
+      "cnScore": 4.964891261401071,
+      "publishedAt": 1774511821,
+      "summaryZh": "",
+      "isTranslated": false
+    },
+    {
+      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739478701588745?f=rss]]>",
+      "title": "易点天下：已向香港联交所递交H股发行及上市申请",
+      "titleZh": "易点天下：已向香港联交所递交H股发行及上市申请",
+      "url": "<![CDATA[https://36kr.com/newsflashes/3739478701588745?f=rss]]>",
+      "source": [
+        "36氪"
+      ],
+      "hotness": 1.24,
+      "cnScore": 4.955992323072504,
+      "publishedAt": 1774511666,
+      "summaryZh": "",
+      "isTranslated": false
+    },
+    {
+      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739473876566280?f=rss]]>",
+      "title": "汽水音乐：优化抖音音乐开放平台歌曲授权合作的分成方式和激励活动",
+      "titleZh": "汽水音乐：优化抖音音乐开放平台歌曲授权合作的分成方式和激励活动",
+      "url": "<![CDATA[https://36kr.com/newsflashes/3739473876566280?f=rss]]>",
+      "source": [
+        "36氪"
+      ],
+      "hotness": 1.23,
+      "cnScore": 4.939156842473035,
+      "publishedAt": 1774511372,
+      "summaryZh": "",
+      "isTranslated": false
+    },
+    {
+      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739471640133893?f=rss]]>",
+      "title": "布伦特原油突破100美元/桶",
+      "titleZh": "布伦特原油突破100美元/桶",
+      "url": "<![CDATA[https://36kr.com/newsflashes/3739471640133893?f=rss]]>",
+      "source": [
+        "36氪"
+      ],
+      "hotness": 1.23,
+      "cnScore": 4.9313312835035354,
+      "publishedAt": 1774511235,
+      "summaryZh": "",
       "isTranslated": false
     },
     {
@@ -334,105 +426,9 @@
       "source": [
         "36氪"
       ],
-      "hotness": 1.25,
-      "cnScore": 4.9844385024926146,
-      "publishedAt": 1774511094,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739465645785093?f=rss]]>",
-      "title": "中国化学：2月签订合同金额合计537.07亿元",
-      "titleZh": "中国化学：2月签订合同金额合计537.07亿元",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739465645785093?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
-      "hotness": 1.24,
-      "cnScore": 4.971475080674018,
-      "publishedAt": 1774510869,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739461419237381?f=rss]]>",
-      "title": "跨国公司负责人密集来华访问，商务部：来中国投资已从可选项升级为必选项",
-      "titleZh": "跨国公司负责人密集来华访问，商务部：来中国投资已从可选项升级为必选项",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739461419237381?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
-      "hotness": 1.24,
-      "cnScore": 4.956709215611307,
-      "publishedAt": 1774510612,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739459222355972?f=rss]]>",
-      "title": "北京人形机器人创新中心发布开源开放生态计划",
-      "titleZh": "北京人形机器人创新中心发布开源开放生态计划",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739459222355972?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
-      "hotness": 1.24,
-      "cnScore": 4.948970404982183,
-      "publishedAt": 1774510477,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739458014331137?f=rss]]>",
-      "title": "歌尔光学科技上海公司注册资金增至2亿元",
-      "titleZh": "歌尔光学科技上海公司注册资金增至2亿元",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739458014331137?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
-      "hotness": 1.24,
-      "cnScore": 4.944790749187688,
-      "publishedAt": 1774510404,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739452725116930?f=rss]]>",
-      "title": "“讯兔科技”正式完成近2亿元A轮融资",
-      "titleZh": "“讯兔科技”正式完成近2亿元A轮融资",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739452725116930?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
       "hotness": 1.23,
-      "cnScore": 4.926339526007453,
-      "publishedAt": 1774510081,
-      "summaryZh": "",
-      "isTranslated": false
-    },
-    {
-      "id": "hn-47512816",
-      "title": "VitruvianOS – Desktop Linux Inspired by the BeOS",
-      "url": "https://v-os.dev",
-      "source": [
-        "Hacker News"
-      ],
-      "hotness": 1.22,
-      "hnScore": 4.083323977174279,
-      "publishedAt": 1774408626,
-      "isTranslated": false
-    },
-    {
-      "id": "36kr-<![CDATA[https://36kr.com/newsflashes/3739444657078533?f=rss]]>",
-      "title": "华安、海富通基金合并方案已出？知情人士：相关传言不属实",
-      "titleZh": "华安、海富通基金合并方案已出？知情人士：相关传言不属实",
-      "url": "<![CDATA[https://36kr.com/newsflashes/3739444657078533?f=rss]]>",
-      "source": [
-        "36氪"
-      ],
-      "hotness": 1.22,
-      "cnScore": 4.898309786600433,
-      "publishedAt": 1774509588,
+      "cnScore": 4.923290187906966,
+      "publishedAt": 1774511094,
       "summaryZh": "",
       "isTranslated": false
     }
